@@ -1,4 +1,6 @@
 import './src/scss/style.scss';
+import illustrationImg from './assets/images/illustration-article.svg';
+import avatar from './assets/images/image-avatar.webp';
 
 document.getElementById('app').innerHTML = `
   <main class="main">
@@ -6,7 +8,7 @@ document.getElementById('app').innerHTML = `
 				<div class="card__image-wrapper">
 					<img
 						class="card__image"
-						src="./assets/images/illustration-article.svg"
+						src=${illustrationImg}
 						alt="Illustration article"
 					/>
 				</div>
@@ -22,7 +24,7 @@ document.getElementById('app').innerHTML = `
 				<div class="profile">
 					<img
 						class="profile__image"
-						src="./assets/images/image-avatar.webp"
+						src=${avatar}
 						alt="Image avatar"
 					/>
 					<span class="profile__name">Greg Hooper</span>
