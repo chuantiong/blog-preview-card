@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap');
+@import 'attribution';
+
+$clr-yellow: #F4D04E;
+$clr-black: #111111;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: $clr-yellow;
+    font-family: 'Figtree', sans-serif;
+}
+
+img {
+    display: block;
+}
+
+.main {
+    width: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    width: 100%;
+    min-width: 327px;
+    max-width: 384px;
+    background-color: #ffff;
+    padding: 1.5rem;
+    border: 1px solid $clr-black;
+    border-radius: 1.25rem;
+    box-shadow: 16px 16px 0px 0px #000;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &__image-wrapper {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    &__image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+    }
+
+    &__status {
+        width: fit-content;
+        background-color: $clr-yellow;
+        color: #111111;
+        font-size: 0.75rem;
+        font-weight: 800;
+        line-height: 150%;
+        text-transform: capitalize;
+        padding: .285em .857em;
+        border-radius: 4px;
+    }
+
+    &__date {
+        font-size: 0.75rem;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    &__title-link {
+        color: $clr-black;
+        width: fit-content;
+        font-size: 1.25rem;
+        font-weight: 800;
+        line-height: 150%;
+        display: block;
+        text-decoration: none;
+
+        &:hover {
+            color: $clr-yellow;
+        }
+    }
+
+    &__description {
+        color: #7F7F7F;
+        font-size: .875rem;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+
+        &__image {
+            width: 32px;
+            height: 32px;
+        }
+
+        &__name {
+            font-size: 0.875rem;
+            font-weight: 800;
+            line-height: 150%;
+        }
+    }
+}
+
+@media (min-width: 650px) {
+    .card {
+        &__status, 
+        &__date {
+            font-size: .875rem;
+        }
+
+        &__title-link {
+            font-size: 1.5rem;
+        }
+
+        &_description {
+            font-size: 1rem;
+        }
+    }
+}
