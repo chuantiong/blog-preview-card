@@ -47,6 +47,12 @@ img {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+    &:hover {
+        box-shadow: 16px 16px 0px 0px #000;
+    }
 
     &__image-wrapper {
         border-radius: 10px;
@@ -91,6 +97,7 @@ img {
         line-height: 150%;
         display: block;
         text-decoration: none;
+        transition: .3s ease-in-out;
 
         &:hover {
             color: $clr-yellow;
