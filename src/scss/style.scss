@@ -29,9 +29,10 @@ img {
 }
 
 .main {
-    width: 50%;
+    width: 100vw;
     display: grid;
     place-items: center;
+    padding-inline: 8rem;
 }
 
 .card {
@@ -122,6 +123,11 @@ img {
 }
 
 @media (min-width: 650px) {
+    .main {
+        width: 100%;
+        padding-inline: 0;
+    }
+
     .card {
         &__status, 
         &__date {
@@ -132,7 +138,7 @@ img {
             font-size: 1.5rem;
         }
 
-        &_description {
+        &__description {
             font-size: 1rem;
         }
     }
